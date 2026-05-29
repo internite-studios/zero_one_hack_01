@@ -1,0 +1,38 @@
+# Secrets — NEVER commit these
+.env
+*.pem
+*.key
+credentials.*
+*_secret.*
+
+# pixi
+.pixi/
+pixi.lock
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+
+# Training artifacts (large files)
+*.pt
+*.pth
+*.bin
+checkpoints/
+logs/
+wandb/
