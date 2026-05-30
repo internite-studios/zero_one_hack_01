@@ -1,0 +1,26 @@
+[project]
+name = "mnist-classifier"
+channels = ["conda-forge", "pytorch"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = "3.12.*"
+pytorch = ">=2.5"
+torchvision = ">=0.20"
+scikit-learn = ">=1.5"
+
+[tasks]
+# Run on LOGIN NODE (has internet) to download MNIST data before training
+download = "python3 test/download_data.py"
+# Run on COMPUTE NODE via SLURM (no internet) after data is downloaded
+train = "python3 test/train.py"
+
+[feature.gpu.system-requirements]
+cuda = "12"
+
+[feature.gpu.dependencies]
+pytorch-cuda = { version = ">=2.5", channel = "pytorch" }
+
+[environments]
+default = []
+gpu = ["gpu"]
