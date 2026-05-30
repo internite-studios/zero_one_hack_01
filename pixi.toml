@@ -30,6 +30,8 @@ libc = { family = "glibc", version = "2.28" }
 [dependencies]
 python = "3.12.*"
 pip = "*"
+transformers = ">=4.45"
+huggingface_hub = "*"
 
 # =============================================================================
 # CPU / Development feature

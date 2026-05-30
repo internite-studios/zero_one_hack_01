@@ -14,6 +14,8 @@ scikit-learn = ">=1.5"
 download = "python3 test/download_data.py"
 # Run on COMPUTE NODE via SLURM (no internet) after data is downloaded
 train = "python3 test/train.py"
+# Run inference on 10 sampled test digits, saves PNGs + confidence scores
+infer = "python3 test/infer.py"
 
 [feature.gpu.system-requirements]
 cuda = "12"
